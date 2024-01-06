@@ -114,6 +114,13 @@ button{
   outline: none;
   background-color: #303B59;
   color: #DAE1E8;
+  transition: all 0.7s ease;
+}
+
+button:hover{
+  cursor: pointer;
+  background: rgb(103,67,255);
+  background: linear-gradient(180deg, rgba(103,67,255,1) 0%, rgba(46,45,234,1) 100%);
 }
 
 .attribution {
@@ -126,7 +133,48 @@ button{
 }
 
 @media (min-width : 768px){
+  .container{
+    padding: 0 5rem;
+  }
+}
+
+@media (min-width : 1024px) {
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width : 65%;
+    min-height: 450px;
+    padding: 0;
+    border-radius: 30px;
+    -webkit-box-shadow: -1px -1px 40px -3px rgba(122,136,207,0.7);
+-moz-box-shadow: -1px -1px 40px -3px rgba(122,136,207,0.7);
+box-shadow: -1px -1px 40px -3px rgba(122,136,207,0.7);
+  }
   .main{
-    background-color: red;
+    border-radius: 30px;
+    justify-content: space-evenly;
+  }
+  button{
+    margin: 1rem 0;
+  }
+  .breakdown{
+    margin: 1.5rem 0;
+  }
+}
+
+@media (min-width : 1440px){
+  .container{
+    width: 50%;
+    -webkit-box-shadow: -1px -1px 40px -3px rgba(122,136,207,0.7);
+-moz-box-shadow: -1px -1px 40px -3px rgba(122,136,207,0.7);
+box-shadow: -1px -1px 40px -3px rgba(122,136,207,0.7);
   }
 }
